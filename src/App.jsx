@@ -8,11 +8,16 @@ const newStyle = {
 	backgroundColor: "aqua",
 };
 
+const nayoks = ["Sakib", "Rakib", "Moksud", "Bulbul"];
+
 function App() {
 	const [count, setCount] = useState(0);
 
 	return (
 		<div className='App'>
+			{nayoks.map((nayok) => (
+				<Person name={nayok}></Person>
+			))}
 			<Person name='Sakib al Hasan' profession='Cricket'></Person>
 			<Person name='Sakib Khan' profession='Actor'></Person>
 			<Friend name='Sakib' profession='Student'></Friend>
